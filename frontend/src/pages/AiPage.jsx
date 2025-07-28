@@ -48,7 +48,7 @@ const AiPage = () => {
       };
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/ai/generate-suggestion",
+        "https://nomodo-travel-backend.onrender.com/api/ai/generate-suggestion",
         { prompt },
         config
       );
