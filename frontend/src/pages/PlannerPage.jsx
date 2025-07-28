@@ -59,7 +59,7 @@ const PlannerPage = () => {
           'x-auth-token': userInfo?.token || ''
         }
       };
-      const { data } = await axios.post('http://localhost:5000/api/planner/generate-plan', finalPreferences, config);
+      const { data } = await axios.post('https://nomodo-travel-backend.onrender.com/api/planner/generate-plan', finalPreferences, config);
       setPlan(data);
     } catch (err) {
       setError(err.response?.data?.msg || 'An error occurred.');
