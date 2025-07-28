@@ -1,4 +1,4 @@
-# Nomodo - Your AI-Powered Travel Companion
+# Nomodo - Your AI-Powered Travel Companion ✈️
 
 Nomodo is a full-stack MERN application designed to be the ultimate companion for discovering, sharing, and planning your next adventure. It solves the common problem of "where should I go next?" by combining user-generated travel suggestions with the creative power of AI.
 
