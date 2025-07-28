@@ -44,7 +44,7 @@ const SuggestionCreatePage = () => {
       };
 
       await axios.post(
-        "http://localhost:5000/api/suggestions",
+        "https://nomodo-travel-backend.onrender.com/api/suggestions",
         { title, location, description, image },
         config
       );
