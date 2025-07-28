@@ -38,7 +38,7 @@ export const RegisterPage = () => {
       };
 
       // The URL for our backend registration endpoint
-      const registerUrl = "http://localhost:5000/api/users/register";
+      const registerUrl = "https://nomodo-travel-backend.onrender.com/api/users/register";
 
       const { data } = await axios.post(
         registerUrl,
