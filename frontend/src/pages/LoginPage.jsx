@@ -42,7 +42,7 @@ export const LoginPage = () => {
         },
       };
 
-      const loginUrl = "http://localhost:5000/api/users/login";
+      const loginUrl = "https://nomodo-travel-backend.onrender.com/api/users/login";
 
       const { data } = await axios.post(loginUrl, { email, password }, config);
 
