@@ -32,7 +32,7 @@ export const HomePage = () => {
         try {
           setLoading(true);
           const { data } = await axios.get(
-            `http://localhost:5000/api/suggestions?keyword=${urlKeyword || ""}`
+            `https://nomodo-travel-backend.onrender.com/api/suggestions?keyword=${urlKeyword || ""}`
           );
           setSuggestions(data);
           setLoading(false);
