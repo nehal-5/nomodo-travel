@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+  /* 🌈 Color Palette */
+  --color-primary-start: #3f51b5;
+  --color-primary-end: #2196f3;
+  --color-primary-gradient: linear-gradient(to right, var(--color-primary-start), var(--color-primary-end));
+
+  --color-dark-bg: #121212;
+  --color-light-bg: #ffffff;
+  --color-accent: #00ffc3;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #f1f1f1;
+
+  /* 🔤 Typography */
+  --font-family: 'Poppins', sans-serif;
+  --font-size-brand: 1.5rem;
+  --font-weight-bold: 700;
+  --font-weight-semi: 600;
+
+  /* 🎨 Shadows */
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  /* 📏 Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+
+  /* 🖼️ Border Radius */
+  --radius-default: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ...existing code... */
+
+.modern-footer {
+  background: var(--color-primary-gradient);
+  padding: var(--spacing-md) 0;
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-family);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Fix typo in .footer-text */
+.footer-text {
+  margin: 0;
+  text-align: center;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semi);
+  font-size: 0.95rem;
+  position: static;
+}

@@ -1,0 +1,60 @@
+@import "../index.css";
+
+.register-container {
+  background: var(--color-light-bg);
+  font-family: var(--font-family);
+}
+
+.register-card {
+  border-radius: var(--radius-default);
+  background-color: var(--color-light-bg);
+  box-shadow: var(--shadow-lg);
+}
+
+.rounded-input {
+  border-radius: var(--radius-default);
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.rounded-input:focus {
+  border-color: var(--color-primary-end);
+  box-shadow: 0 0 0 0.2rem rgba(63, 81, 181, 0.25);
+}
+
+.register-btn {
+  background: var(--color-primary-gradient);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-weight: var(--font-weight-semi);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-default);
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  filter: brightness(1.1);
+}
+
+.login-link {
+  color: var(--color-primary-end);
+  font-weight: var(--font-weight-semi);
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.register-image {
+  width: 100%;
+  height: 600px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .register-image {
+    display: none;
+  }
+}

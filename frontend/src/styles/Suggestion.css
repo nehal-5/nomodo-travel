@@ -1,0 +1,220 @@
+@import '../index.css';
+
+.modern-form-container {
+  background-color: var(--color-light-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-family);
+}
+
+.modern-form-heading {
+  font-size: var(--font-size-brand);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-start);
+  margin-bottom: var(--spacing-md);
+}
+
+.modern-form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.modern-form-group label {
+  font-weight: var(--font-weight-semi);
+  color: var(--color-primary-start);
+}
+
+.modern-form-group input,
+.modern-form-group textarea {
+  border-radius: var(--radius-default);
+  padding: var(--spacing-sm);
+  border: 1px solid #ccc;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.modern-form-group input:focus,
+.modern-form-group textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.modern-submit-btn {
+  background: var(--color-primary-gradient);
+  color: var(--color-text-primary);
+  border: none;
+  font-weight: var(--font-weight-semi);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.modern-submit-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+
+/* Suggestion card */
+/* Root variables should already be defined in your global styles */
+
+.modern-suggestion-card {
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-lg);
+  background: var(--color-light-bg);
+  font-family: var(--font-family);
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+/* Hover effect for modern UX */
+.modern-suggestion-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Image styling */
+.modern-suggestion-card img {
+  border-radius: var(--radius-default);
+  object-fit: cover;
+  max-height: 200px;
+  width: 100%;
+}
+
+/* Title styling */
+.modern-suggestion-card .card-title {
+  font-weight: var(--font-weight-bold);
+  font-size: 1.2rem;
+  color: var(--color-primary-start);
+}
+
+/* Location subtitle */
+.modern-suggestion-card .card-subtitle {
+  color: #777;
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-semi);
+}
+
+/* Description */
+.modern-suggestion-card .card-text {
+  color: #333;
+  margin-top: var(--spacing-sm);
+}
+
+/* Username */
+.modern-suggestion-card .card-text:last-child {
+  color: gray;
+  margin-top: var(--spacing-sm);
+}
+
+.modern-suggestion-card .card-text:last-child span {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+
+
+/* Suggestions Homepage with search and create */
+
+/* Homepage Wrapper */
+.suggestions-container {
+  font-family: var(--font-family);
+}
+
+/* Search Section Styling */
+.modern-search-form {
+  background-color: #f9f9f9;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-default);
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.modern-search-input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.modern-search-input:focus {
+  box-shadow: none;
+}
+
+.modern-search-btn {
+  background-color: var(--color-primary-start);
+  color: white;
+  border: none;
+  font-weight: var(--font-weight-semi);
+}
+
+.modern-search-btn:hover {
+  background-color: var(--color-primary-end);
+}
+
+/* Section Separators */
+.search-section {
+  margin-bottom: 2rem;
+}
+
+.latest-section {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-md);
+}
+
+/* Heading */
+.modern-heading {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-start);
+  font-size: 1.75rem;
+}
+
+
+/* Smaller heading */
+.modern-heading {
+  font-size: 1.5rem; /* Decreased from h1 size */
+  font-weight: 600;
+  color: var(--color-primary-end);
+  margin-left: var(--spacing-sm);
+  font-family: var(--font-family);
+}
+
+/* Enhanced Search Form */
+.modern-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.modern-search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-default);
+  border: 1px solid #ccc;
+  font-family: var(--font-family);
+  font-size: 1rem;
+}
+
+/* Buttons beside search */
+.modern-search-btn,
+.modern-create-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius-default);
+  background: var(--color-primary-gradient);
+  color: white;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+
+.modern-search-btn:hover,
+.modern-create-btn:hover {
+  background: var(--color-primary-start);
+}

@@ -1,0 +1,45 @@
+@import '../index.css';
+
+.custom-navbar {
+  background: var(--color-primary-gradient);
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-family);
+  transition: all 0.3s ease;
+  position: sticky;
+}
+
+.brand-text {
+  font-size: var(--font-size-brand);
+  letter-spacing: 1px;
+}
+
+.nav-link-custom {
+  font-weight: var(--font-weight-semi);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+  margin-left: var(--spacing-sm);
+}
+
+.nav-link-custom:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.dropdown-custom .dropdown-menu {
+  border-radius: var(--radius-default);
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.dropdown-custom .dropdown-item {
+  font-weight: var(--font-weight-semi);
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-custom .dropdown-item:hover {
+  background-color: var(--color-primary-end);
+  color: var(--color-text-primary);
+}

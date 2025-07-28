@@ -1,0 +1,118 @@
+
+@import '../index.css';
+* {
+  font-family: var(--font-family);
+}
+/* 📦 Container */
+.planner-container {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+}
+
+/* 🗂️ Card Wrapper */
+.planner-card {
+  background-color: var(--color-light-bg);
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-lg);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+/* 🧭 Step Title */
+.step-title {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+}
+
+/* 🎛️ Option Button Grid */
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-md);
+}
+
+/* 🎯 Option Button */
+.btn-option {
+  padding: var(--spacing-md);
+  font-size: 1rem;
+  background: var(--color-primary-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--radius-default);
+  cursor: pointer;
+  font-weight: var(--font-weight-semi);
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-option:hover {
+  transform: scale(1.05);
+}
+
+/* 🔁 Reset Button */
+.btn-secondary {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-dark-bg);
+  color: var(--color-light-bg);
+  border: none;
+  border-radius: var(--radius-default);
+  font-weight: var(--font-weight-semi);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+/* 📍 Trip Result Card */
+.trip-card {
+  background-color: var(--color-light-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-lg);
+  text-align: left;
+}
+
+.trip-title {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  background: var(--color-primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--spacing-md);
+}
+
+.trip-location {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-semi);
+}
+
+.trip-subtitle {
+  color: var(--color-primary-start);
+  font-style: italic;
+  margin-bottom: var(--spacing-md);
+}
+
+/* 📅 Each Day in the Itinerary */
+.itinerary-day {
+  margin-top: var(--spacing-md);
+}
+
+
+.activity-list {
+  margin-top: var(--spacing-sm);
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+.activity-list li {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.6;
+}
