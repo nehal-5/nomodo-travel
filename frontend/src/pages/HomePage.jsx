@@ -83,10 +83,6 @@ export const HomePage = () => {
               />
               <Button type="submit" className="modern-search-btn me-2"> Search
               </Button>
-              {/* Create Suggestion Button (inline) */}
-              <Button as={Link} to="/create" className="modern-create-btn">
-                Create 
-              </Button>
             </Form>
           </Col>
         </Row>
