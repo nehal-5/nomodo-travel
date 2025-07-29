@@ -8,6 +8,7 @@ import { RegisterPage } from "./pages/RegisterPage";
 import SuggestionCreatePage from "./pages/SuggestionCreatePage";
 import AiPage from "./pages/AiPage";
 import PlannerPage from "./pages/PlannerPage";
+import Need from "./components/Need";
 
 const App = () => {
   const [userInfo, setUserInfo] = useState(
@@ -18,6 +19,7 @@ const App = () => {
   return (
     <Router>
       <Header userInfo={userInfo} setUserInfo={setUserInfo} />
+      <Need />
       <main className="py-3">
         <Container>
           <Routes>
