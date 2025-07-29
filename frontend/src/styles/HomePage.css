@@ -25,12 +25,12 @@
 }
 
 .homapage-h1 {
-    font-size: 20px;
+    font-size: 24px;
     font-family: var(--font-family);
 }
 
 .homepage-p {
-    font-size: 16px;
+    font-size: 20px;
     font-family: var(--font-family);
 }
 
