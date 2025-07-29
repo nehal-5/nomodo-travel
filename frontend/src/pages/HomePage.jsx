@@ -119,10 +119,10 @@ export const HomePage = () => {
         <Container className="d-flex justify-content-center align-items-center min-vh-100">
           <Card className="text-center p-5 homepage-card shadow-lg">
             <Card.Body>
-              <Card.Title as="h1" className="mb-4 fw-bold">
+              <Card.Title as="h1" className="mb-4 fw-bold homepage-h1">
                 Welcome to Nomodo
               </Card.Title>
-              <Card.Text className="mb-4 fs-5">
+              <Card.Text className="mb-4 fs-5 homepage-p">
                 Your Ultimate Companion for discovering and sharing travel
                 suggestions
               </Card.Text>
