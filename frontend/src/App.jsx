@@ -19,7 +19,7 @@ const App = () => {
   return (
     <Router>
       <Header userInfo={userInfo} setUserInfo={setUserInfo} />
-      <Need />
+      {userInfo && <Need />}
       <main className="py-3">
         <Container>
           <Routes>
