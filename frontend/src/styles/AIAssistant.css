@@ -2,6 +2,7 @@
 .ai-container {
   font-family: var(--font-family);
   color: var(--color-text-primary);
+  margin: 50px auto;
 }
 
 .ai-card {
