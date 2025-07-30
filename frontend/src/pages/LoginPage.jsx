@@ -6,7 +6,7 @@ import Loader from "../components/Loader";
 import { Message } from "../components/Message";
 import "../styles/Login.css";
 import LoginImage from "../assets/images/Login.png"; 
-export const LoginPage = () => {
+export const LoginPage = ({setUserInfo}) => {
   // State for form fields
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,36 +18,15 @@ export const LoginPage = () => {
   // Hook for navigation
   const navigate = useNavigate();
 
-  // We'll get userInfo from localStorage later to redirect if already logged in
-  const userInfo = localStorage.getItem("userInfo")
-    ? JSON.parse(localStorage.getItem("userInfo"))
-    : null;
-
-  useEffect(() => {
-    // If user is already logged in, redirect them to the homepage
-    if (userInfo) {
-      navigate("/");
-    }
-  }, [navigate, userInfo]);
-
   const submitHandler = async (e) => {
     e.preventDefault();
-    setError(null);
     setLoading(true);
 
     try {
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
 
       const loginUrl = "https://nomodo-travel-backend.onrender.com/api/users/login";
 
-      const { data } = await axios.post(loginUrl, { email, password }, config);
-
-      // On success, save user data (including token) to localStorage
-      localStorage.setItem("userInfo", JSON.stringify(data));
+      const { data } = await axios.post(loginUrl, { email, password });
 
       setUserInfo(data);
       setLoading(false);
@@ -112,7 +91,7 @@ export const LoginPage = () => {
               <Row className="py-3">
                 <Col className="text-center">
                   New user?{" "}
-                  <Link to="/register" className="signup-link">
+                  <Link to={"/register"} className="signup-link">
                     Sign Up
                   </Link>
                 </Col>
