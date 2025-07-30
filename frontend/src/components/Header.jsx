@@ -9,7 +9,6 @@ export const Header = ({ userInfo, setUserInfo }) => {
   const navigate = useNavigate();
 
   const logoutHandler = () => {
-    localStorage.removeItem('userInfo');
     setUserInfo(null); // Update parent state
     navigate('/login');
   };
