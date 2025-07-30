@@ -24,7 +24,7 @@ const App = () => {
         <Container>
           <Routes>
             <Route path="/" element={<HomePage userInfo={userInfo} />} />
-            <Route path="/login" element={<LoginPage />} />
+            <Route path="/login" element={<LoginPage setUserInfo={setUserInfo} />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/create" element={<SuggestionCreatePage />} />
             <Route path="/search/:keyword" element={<HomePage userInfo={userInfo} />} />
