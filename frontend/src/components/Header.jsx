@@ -16,19 +16,12 @@ export const Header = ({ userInfo, setUserInfo }) => {
 
   return (
     <header>
-      <Navbar
-        expand="lg"
-        variant="dark"
-        className="custom-navbar"
-        sticky="top"
-      >
+      <Navbar expand="lg" variant="dark" className="custom-navbar" sticky="top">
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand className="fw-bold brand-text">Nomodo</Navbar.Brand>
           </LinkContainer>
-
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto align-items-center">
               {userInfo && (
@@ -47,12 +40,10 @@ export const Header = ({ userInfo, setUserInfo }) => {
                   id="username"
                   className="dropdown-custom"
                 >
-
                   <LinkContainer to="/ai">
                     <NavDropdown.Item>AI Assistant</NavDropdown.Item>
                   </LinkContainer>
                   <NavDropdown.Divider />
-
                   <NavDropdown.Item onClick={logoutHandler}>
                     <FaSignOutAlt className="me-2" />
                     Logout
@@ -66,7 +57,6 @@ export const Header = ({ userInfo, setUserInfo }) => {
                       Sign In
                     </Nav.Link>
                   </LinkContainer>
-
                   <LinkContainer to="/register">
                     <Nav.Link className="nav-link-custom">
                       <FaUserPlus className="me-2" />
