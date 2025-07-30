@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Loader from "../components/Loader";
 import { Message } from "../components/Message";
 import "../styles/Register.css"; 
@@ -9,6 +9,7 @@ import RegisterImage from "../assets/images/Register.png";
 
 export const RegisterPage = () => {
   // State for form fields
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -54,6 +55,7 @@ export const RegisterPage = () => {
       setEmail("");
       setPassword("");
       setConfirmPassword("");
+      navigate("/login")
     } catch (err) {
       setLoading(false);
       // Set error message from backend response if it exists, otherwise a generic one
