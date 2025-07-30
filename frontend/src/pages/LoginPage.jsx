@@ -49,6 +49,7 @@ export const LoginPage = () => {
       // On success, save user data (including token) to localStorage
       localStorage.setItem("userInfo", JSON.stringify(data));
 
+      setUserInfo(data);
       setLoading(false);
       // Redirect to homepage on successful login
       navigate("/");
