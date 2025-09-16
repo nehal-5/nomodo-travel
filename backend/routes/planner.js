@@ -84,30 +84,56 @@ router.post('/generate-plan', auth, async (req, res) => {
 router.post("/generate-image", auth, async (req, res) => {
   const { placeName } = req.body;
 
-  // Validate that we received a placeName
   if (!placeName) {
     return res.status(400).json({ msg: "Place name is required." });
   }
 
   try {
-    // --- Gemini Integration Placeholder ---
-    // For now, we'll use a service like Unsplash Source to get a dynamic, high-quality
-    // image instantly. This is a great way to build and test the feature.
-    // Later, you can replace this line with a real call to the Gemini API.
+    // 1. Define the API endpoint and your API Key from the .env file
+    const engineId = "stable-diffusion-v1-6";
+    const apiHost = "https://api.stability.ai";
+    const apiKey = process.env.STABILITY_API_KEY;
 
-    const imageUrl = `https://source.unsplash.com/1600x900/?${encodeURIComponent(
-      placeName
-    )}`;
+    if (!apiKey) {
+      throw new Error("Stability AI API key not found.");
+    }
 
-    console.log(`Generated image URL for ${placeName}: ${imageUrl}`);
+    // 2. Create a descriptive prompt for the AI model
+    const prompt = `A breathtaking, vibrant, photorealistic 16:9 landscape wallpaper of ${placeName}, suitable for a travel website hero banner. Epic, cinematic, stunning vista.`;
 
-    // Send the URL back to the frontend
+    // 3. Make the API call to Stability AI
+    const response = await axios.post(
+      `${apiHost}/v1/generation/${engineId}/text-to-image`,
+      {
+        text_prompts: [{ text: prompt }],
+        cfg_scale: 7,
+        height: 512,
+        width: 1024,
+        steps: 30,
+        samples: 1,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+      }
+    );
+
+    // 4. The API returns the image as a Base64 string. We need to format it.
+    const image = response.data.artifacts[0];
+    const imageUrl = `data:image/png;base64,${image.base64}`;
+
+    // 5. Send the formatted image URL back to the frontend
     res.json({ imageUrl });
   } catch (error) {
-    console.error("Error generating image:", error);
+    console.error(
+      "Error generating image from Stability AI:",
+      error.response ? error.response.data : error.message
+    );
     res.status(500).send("Server error while generating image.");
   }
 });
-
 
 module.exports = router;
