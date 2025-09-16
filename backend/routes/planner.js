@@ -81,4 +81,33 @@ router.post('/generate-plan', auth, async (req, res) => {
   }
 });
 
+router.post("/generate-image", auth, async (req, res) => {
+  const { placeName } = req.body;
+
+  // Validate that we received a placeName
+  if (!placeName) {
+    return res.status(400).json({ msg: "Place name is required." });
+  }
+
+  try {
+    // --- Gemini Integration Placeholder ---
+    // For now, we'll use a service like Unsplash Source to get a dynamic, high-quality
+    // image instantly. This is a great way to build and test the feature.
+    // Later, you can replace this line with a real call to the Gemini API.
+
+    const imageUrl = `https://source.unsplash.com/1600x900/?${encodeURIComponent(
+      placeName
+    )}`;
+
+    console.log(`Generated image URL for ${placeName}: ${imageUrl}`);
+
+    // Send the URL back to the frontend
+    res.json({ imageUrl });
+  } catch (error) {
+    console.error("Error generating image:", error);
+    res.status(500).send("Server error while generating image.");
+  }
+});
+
+
 module.exports = router;
